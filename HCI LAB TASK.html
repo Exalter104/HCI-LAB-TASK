@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lunch Order System</title>
+    <style>
+/* Style for the form container */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+/* Style for the form inputs and labels */
+label, input, select, textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: inherit;
+  background-color: #f5f5f5;
+}
+
+/* Style for the radio button inputs */
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+input[type="radio"] + label {
+  color: #333;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+    </style>
+</head>
+<body>
+	<h1>Lunch Order System</h1>
+	
+	<form action="process-order.php" method="post">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		<br>
+		
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		<br>
+		
+		<label for="department">Department:</label>
+		<select id="department" name="department">
+			<option value="Sales">Sales</option>
+			<option value="Marketing">Marketing</option>
+			<option value="IT">IT</option>
+			<option value="HR">HR</option>
+		</select>
+		<br>
+		
+		<label for="lunch">Lunch:</label>
+		<select id="lunch" name="lunch">
+			<option value="Burger and Fries">Burger and Fries</option>
+			<option value="Sandwich and Chips">Sandwich and Chips</option>
+			<option value="Pizza">Pizza</option>
+			<option value="Salad">Salad</option>
+		</select>
+		<br>
+		
+		<label for="drink">Drink:</label>
+		<select id="drink" name="drink">
+			<option value="Water">Water</option>
+			<option value="Soda">Soda</option>
+			<option value="Juice">Juice</option>
+			<option value="Tea">Tea</option>
+		</select>
+		<br>
+		
+			<label for="frequency">Frequency:</label>
+		<input type="radio" id="daily" name="frequency" value="Daily">
+		<label for="daily">Daily</label>
+		<input type="radio" id="occasional" name="frequency" value="Occasional">
+		<label for="occasional">Occasional</label>
+		<input type="radio" id="visitor" name="frequency" value="Visitor">
+		<label for="visitor">Visitor</label>
+		<br>
+		
+		<label for="comments">Comments:</label>
+		<textarea id="comments" name="comments"></textarea>
+		<br>
+		
+		<input type="submit" value="Place Order">
+	</form>
+</body>
+</html>
